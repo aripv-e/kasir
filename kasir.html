@@ -1,0 +1,51 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <h1>Aplikasi kasir elektronik</h1>
+        <h2>STRUK TOKO ELEKTRONIK RPL</h2>
+        <h1>--------------------------------------</h1>
+    </head>
+    <body>
+        <script>
+            let namaPembeli =prompt("Masukkan nama pembeli:");
+            let namaBarang1 =prompt("Masukkan nama barang kesatu:");
+            let hargaBar1 =Number(prompt("Masukkan harga barang kesatu:"));
+            let namaBarang2 =prompt("Masukkan nama barang kedua:");
+            let hargaBar2 =Number(prompt("Masukkan harga barang kedua:"));
+
+            let totalBelanja =hargaBar1 + hargaBar2;
+            let diskon = 0;
+
+            if (totalBelanja > 200000){
+                diskon = 0.2;
+            } else if ( totalBelanja > 100000){
+                diskon = 0.1;
+            } else {
+                diskon = 0;
+            }
+            let hitungDiskon = totalBelanja * diskon;
+            let totalBayar = totalBelanja - hitungDiskon;
+
+            document.write("Nama pembeli:"+namaPembeli+"<br>");
+            document.write("====================================<br>");
+
+            document.write("Nama barang ke1:"+namaBarang1+"<br>");
+            document.write("harga barang ke1:"+hargaBar1+"<br>");
+            document.write("====================================<br>");
+
+            document.write("Nama barang ke2:"+namaBarang2+"<br>");
+            document.write("harga barang ke2:"+hargaBar2+"<br>");
+            document.write("====================================<br>");
+
+            document.write("total belanja:"+totalBelanja+"<br>");
+            document.write("Diskon:"+hitungDiskon+"<br>");
+            document.write("====================================<br>");
+
+            document.write("total bayar:"+totalBayar+"<br>");
+            
+            
+
+        </script>
+    </body>
+</html>
